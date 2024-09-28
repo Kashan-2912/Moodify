@@ -53,7 +53,14 @@ const Login = () => {
       <div className='max-w-[400px] w-full mx-auto'>
           <Button text={authenticating ? 'Submitting' : 'Submit'} full clickHandler={handleSubmit} />
       </div>
-      <p className='text-center'>{isRegister ? 'Already have an account? ' : 'Don\'t have an account? '} <button onClick={() => setIsRegister(!isRegister)} className='text-indigo-500'>{isRegister ? 'Sign In' : 'Sign Up'}</button></p>
+      <p className='text-center'>
+        {isRegister ? 'Already have an account? ' : 'Don\'t have an account? '}
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
+        <button onClick={() => setIsRegister(!isRegister)} className='text-indigo-500'>
+          {isRegister ? 'Sign In' : 'Sign Up'}
+        </button>
+      </p>
+
     </div>
   )
 }
